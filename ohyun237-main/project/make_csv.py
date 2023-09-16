@@ -92,7 +92,7 @@ while sentry:
     time.sleep(0.10)
     ReceivedString = SerialObj.readline()       # Change to receive  mode to get the data from arduino,Arduino sends \n to terminate
     ReceivedString = str(ReceivedString,'utf-8')# Convert bytes to string of encoding utf8
-    tempvalueslist = ReceivedString.split(',')  # Split the string into 4 values at '-'  
+    tempvalueslist = ReceivedString.split('-')  # Split the string into 4 values at '-'  
     #print(f'AN1={tempvalueslist[0]} AN2={tempvalueslist[1]} AN3={tempvalueslist[2]} AN4={tempvalueslist[3]}')
     
     seperator = ','
